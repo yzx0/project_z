@@ -1,13 +1,10 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
     <ZButton>hi</ZButton>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 import ZButton from '@/components/button'
 export default {
   name: 'App',
