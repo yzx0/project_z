@@ -1,0 +1,23 @@
+<template>
+  <div id="app">
+    <ZButton>hi</ZButton>
+  </div>
+</template>
+
+<script>
+import ZButton from '@/components/button'
+export default {
+  name: 'App',
+  components: {
+    HelloWorld,
+    ZButton
+  }
+}
+</script>
+
+<style lang="scss">
+*{margin: 0;padding: 0;box-sizing: border-box;}
+*::before,*::after{margin: 0;padding: 0;box-sizing: border-box;}
+a{color: inherit;text-decoration: none;}
+ul,li{list-style: none;}
+</style>
