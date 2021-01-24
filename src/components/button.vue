@@ -1,19 +1,20 @@
 <template>
   <button class="z-button">
-    <svg v-if="icon" class="icon" aria-hidden="true">
-      <use :xlink:href="`#i-${icon}`"></use>
-    </svg>
+    <z-icon v-if="icon" :name='icon'></z-icon>
     <slot></slot>
-    分支测试123
   </button>
 </template>
 
 <script>
+import Icon from './icon'
 export default {
   props:{
     icon:{
       type:String
     }
+  },
+  components:{
+    'z-icon':Icon
   }
 }
 </script>
