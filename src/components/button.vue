@@ -4,6 +4,7 @@
       <use :xlink:href="`#i-${icon}`"></use>
     </svg>
     <slot></slot>
+    分支测试
   </button>
 </template>
 
