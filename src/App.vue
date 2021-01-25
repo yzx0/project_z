@@ -1,8 +1,10 @@
 <template>
   <div id="app">
-    <ZButton>hi</ZButton>
-    <ZButton icon="setting">hi</ZButton>
-    <ZButton icon="loading">hi</ZButton>
+    <div class="button">
+      <ZButton>hi</ZButton>
+      <ZButton icon="setting" position='left'>hi</ZButton>
+      <ZButton icon="loading" position='right'>hi</ZButton>
+    </div>
   </div>
 </template>
 
@@ -17,5 +19,5 @@ export default {
 </script>
 
 <style lang="scss">
-
+.button{display: flex;.z-button{margin-right: 10px;}}
 </style>
