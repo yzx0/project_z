@@ -1,5 +1,5 @@
 <template>
-  <button :class="[iconPosition,'z-button']">
+  <button :class="[iconPosition,'z-button']" @click="$emit('click')">
     <z-icon v-if="icon && !loading" :name='icon' class="icon"></z-icon>
     <z-icon v-if="loading" name='loading' class="icon loading"></z-icon>
     <div class="content">

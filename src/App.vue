@@ -2,8 +2,8 @@
   <div id="app">
     <div class="button">
       <ZButton>默认按钮</ZButton>
-      <ZButton icon="setting" :loading='true' icon-position='left'>默认按钮</ZButton>
-      <ZButton icon="setting" :loading='true' icon-position='right'>默认按钮</ZButton>
+      <ZButton @click="loading1 = !loading1" icon="setting" :loading='loading1' icon-position='left'>默认按钮</ZButton>
+      <ZButton @click="loading2 = !loading2" icon="setting" :loading='loading2' icon-position='right'>默认按钮</ZButton>
     </div>
   </div>
 </template>
@@ -14,6 +14,12 @@ export default {
   name: 'App',
   components: {
     ZButton
+  },
+  data(){
+    return{
+      loading1:false,
+      loading2:false
+    }
   }
 }
 </script>
