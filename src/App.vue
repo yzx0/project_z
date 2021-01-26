@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <div class="button">
-      <ZButton>hi</ZButton>
-      <ZButton icon="setting" position='left'>hi</ZButton>
-      <ZButton icon="loading" position='right'>hi</ZButton>
+      <ZButton>默认按钮</ZButton>
+      <ZButton icon="setting" :loading='true' icon-position='left'>默认按钮</ZButton>
+      <ZButton icon="setting" :loading='true' icon-position='right'>默认按钮</ZButton>
     </div>
   </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <svg class="icon" aria-hidden="true">
+  <svg class="z-icon" aria-hidden="true">
     <use :xlink:href="`#i-${name}`"></use>
   </svg>
 </template>
@@ -13,10 +13,11 @@ export default {
 }
 </script>
 <style lang="scss">
-  .icon {
+  .z-icon {
     width: 1em; height: 1em;
     vertical-align: -0.15em;
     fill: currentColor;
     overflow: hidden;
   }
+
 </style>
