@@ -47,7 +47,7 @@ export default {
     font-size: $font-size;
     color:$color;
     padding: 0 1em;
-    border-radius: 5px;
+    border-radius: $border-radius;
     background-color: #fff;
     outline: none;
     cursor: pointer;
