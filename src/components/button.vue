@@ -12,6 +12,7 @@
 // button-group
 import Icon from './icon'
 export default {
+  name:'ZButton',
   props:{
     icon:{
       type:String

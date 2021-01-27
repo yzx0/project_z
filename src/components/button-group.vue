@@ -5,10 +5,8 @@
 </template>
 <script>
 export default {
+  name:'ZButtonGroup',
   mounted(){
-    console.log(this.$el)
-    console.log(this.$el.children)
-    console.log(typeof this.$el.children)
     for (const item of this.$el.children) {
       let name = item.nodeName.toLowerCase()
       if(name !== 'button'){
