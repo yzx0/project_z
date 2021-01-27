@@ -34,3 +34,4 @@ export default {
 <style lang="scss">
 .button{display: flex;&>.z-button{margin-right: 10px;}}
 </style>
+
