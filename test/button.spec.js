@@ -1,32 +1,21 @@
-import Vue from 'vue'
-import App from './App.vue'
-
-Vue.config.productionTip = false
-
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
-
-
-// 单元测试
-// import Button from '@/components/button'
-// import chai from 'chai'
-// import spies from 'chai-spies'
-// const expect = chai.expect
-// chai.use(spies)
-// {
-//   const ButtonConstruction = Vue.extend(Button)
-//   const vm = new ButtonConstruction({
-//     propsData:{
-//       icon:'setting'
-//     }
-//   })
-//   vm.$mount()
-//   let use = vm.$el.querySelector('use')
-//   expect(use.getAttribute('xlink:href')).to.eq('#i-setting')
-//   vm.$el.remove()
-//   vm.$destroy()
-// }
+import {expect} from 'chai'
+import { shallowMount } from '@vue/test-utils'
+import Button from '../src/components/button.vue'
+{
+  // const ButtonConstruction = Vue.extend(Button)
+  // const vm = new ButtonConstruction({
+  //   propsData:{
+  //     icon:'setting'
+  //   }
+  // })
+  // vm.$mount()
+  // let use = vm.$el.querySelector('use')
+  // expect(use.getAttribute('xlink:href')).to.eq('#i-setting')
+  // vm.$el.remove()
+  // vm.$destroy()
+  let button = shallowMount(Button)
+  expect(button).to.exist
+}
 // {
 //   const ButtonConstruction = Vue.extend(Button)
 //   const vm = new ButtonConstruction({
