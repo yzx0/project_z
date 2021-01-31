@@ -1,18 +1,18 @@
 {
-  "name": "project_z",
-  "version": "0.1.0",
-  "private": true,
+  "name": "project_z-1-1",
+  "version": "0.0.2",
   "description": "## Project setup ``` npm install ```",
   "author": "yzx0",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --name projectz src/index.js",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit -w"
   },
-  "main": ".eslintrc.js",
+  "main": "dist/projectz.umd.min.js",
   "dependencies": {
     "core-js": "^3.6.5",
+    "current-script-polyfill": "^1.0.0",
     "vue": "^2.6.11"
   },
   "devDependencies": {
