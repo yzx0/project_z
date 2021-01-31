@@ -7,9 +7,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "test": "mochapack --webpack-config webpack.config.js --require test/setup.js test/**/*.spec.js",
     "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit -w"
   },
   "main": ".eslintrc.js",
   "dependencies": {
