@@ -10,7 +10,7 @@
 <script>
 // 点击切换loading状态 
 // button-group
-import Icon from './icon'
+import Icon from '../icon'
 export default {
   name:'ZButton',
   props:{
