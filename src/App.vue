@@ -14,6 +14,10 @@
     <z-input value="张三" :disabled="true"></z-input>
     <z-input value="张三" :readonly="true"></z-input>
     <z-input value="张三" error="密码输入错误"></z-input>
+    <div>
+      <z-input v-model="msg" ></z-input>
+      <p>{{msg}}</p>
+    </div>
   </div>
 </template>
 
@@ -31,7 +35,8 @@ export default {
   data(){
     return{
       loading1:false,
-      loading2:false
+      loading2:false,
+      msg:'v-model'
     }
   },
   methods:{
