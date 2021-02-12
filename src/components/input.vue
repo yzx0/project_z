@@ -1,6 +1,11 @@
 <template>  
   <div class="wrapper" :class="{error}">
-    <input :value="value" type="text" :disabled="disabled" :readonly="readonly">
+    <input :value="value" type="text" :disabled="disabled" :readonly="readonly"
+      @change="$emit('change',$event)"
+      @focus="$emit('focus',$event)"
+      @blur="$emit('blur',$event)"
+      @input="$emit('input',$event)"
+    >
     <template v-if="error">
       <icon name="error" class="icon-error"></icon>
       <span class="errorMessage">{{error}}</span>
@@ -15,7 +20,7 @@
     components: {Icon},
     props: {
       value: {
-        type: String
+        type: [String,Number]
       },
       disabled: {
         type: Boolean,

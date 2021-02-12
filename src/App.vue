@@ -10,7 +10,7 @@
         <z-button icon="right" icon-position='right'>下一页</z-button>
       </z-button-group>
     </div>
-    <z-input value="张三"></z-input>
+    <z-input value="张三" @input="inputEvent" @focus="focusEvent" @blur="blurEvent" @change="changeEvent"></z-input>
     <z-input value="张三" :disabled="true"></z-input>
     <z-input value="张三" :readonly="true"></z-input>
     <z-input value="张三" error="密码输入错误"></z-input>
@@ -32,6 +32,20 @@ export default {
     return{
       loading1:false,
       loading2:false
+    }
+  },
+  methods:{
+    inputEvent(e){
+      console.log('input:',e)
+    },
+    focusEvent(e){
+      console.log('focus:',e)
+    },
+    blurEvent(e){
+      console.log('blur:',e)
+    },
+    changeEvent(e){
+      console.log('change:',e)
     }
   }
 }
