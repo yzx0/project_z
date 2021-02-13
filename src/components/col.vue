@@ -55,7 +55,7 @@ export default {
   },
   methods:{
     createClass(obj,str){
-      if(!obj){return}
+      if(!obj){return []}
       return [
         obj.span && `z-col-${str}span-${obj.span}`,
         obj.offset && `z-col-${str}offset-${obj.offset}`
@@ -66,7 +66,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 .z-col{
-  width: 100%;
   min-height: 50px;
 }
 @for $i from 1 through 24{

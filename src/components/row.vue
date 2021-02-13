@@ -1,5 +1,5 @@
 <template>
-  <div class="z-row" :style="{'margin': `0 ${-gutter/2}px`}">
+  <div :class="rowClass" :style="{'margin': `0 ${-gutter/2}px`}">
     <slot></slot>
   </div>
 </template>
@@ -9,12 +9,26 @@ export default {
   props:{
     gutter:{
       type:[Number,String]
+    },
+    align:{
+      type:String,
+      validator(val){
+        return ['left','right','center'].includes(val)
+      }
     }
   },
   mounted(){
     this.$children.forEach(vm=>{
       vm.gutter = this.gutter
     })
+  },
+  computed:{
+    rowClass(){
+      return[
+        'z-row',
+        this.align && `align-${this.align}`
+      ]
+    }
   }
 }
 </script>
@@ -22,5 +36,8 @@ export default {
   .z-row{
     display: flex;
     flex-wrap: wrap;
+    &.align-left{justify-content: flex-start;}
+    &.align-right{justify-content: flex-end;}
+    &.align-center{justify-content: center;}
   }
 </style>

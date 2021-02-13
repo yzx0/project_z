@@ -26,10 +26,6 @@
         <z-col :phone="{span:12}" :ipad="{span:12}" :pc="{span:6}" :wide-pc="{span:22}"><div class="test-box">2</div></z-col>
       </z-row>
       <z-row gutter="20">
-        <z-col span="10" offset="4"><div class="test-box">1</div></z-col>
-        <z-col span="10"><div class="test-box">2</div></z-col>
-      </z-row>
-      <z-row gutter="20">
         <z-col span="8"><div class="test-box">1</div></z-col>
         <z-col span="8"><div class="test-box">2</div></z-col>
         <z-col span="8"><div class="test-box">3</div></z-col>
@@ -39,6 +35,23 @@
         <z-col span="6"><div class="test-box">2</div></z-col>
         <z-col span="6"><div class="test-box">3</div></z-col>
         <z-col span="6"><div class="test-box">4</div></z-col>
+      </z-row>
+      <z-row>
+        <z-col span="8">
+          <z-row align="right">
+            <z-col>
+              <div class="logo-wrapper" style="display:inline">
+                <img style="height:50%" src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg" alt=""/>
+              </div>
+            </z-col>
+          </z-row>
+        </z-col>
+        <z-col span="16">
+          <z-row align="right">
+            <z-col>1</z-col>
+            <z-col>2</z-col>
+          </z-row>
+        </z-col>
       </z-row>
     </div>
   </div>
