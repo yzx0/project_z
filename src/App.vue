@@ -18,6 +18,23 @@
       <z-input v-model="msg" ></z-input>
       <p>{{msg}}</p>
     </div>
+    <div style="border:1px solid">
+      <z-row gutter="20">
+        <z-col span="10"><div class="test-box">1</div></z-col>
+        <z-col span="10" offset="4"><div class="test-box">2</div></z-col>
+      </z-row>
+      <z-row gutter="20">
+        <z-col span="8"><div class="test-box">1</div></z-col>
+        <z-col span="8"><div class="test-box">2</div></z-col>
+        <z-col span="8"><div class="test-box">3</div></z-col>
+      </z-row>
+      <z-row gutter="20">
+        <z-col span="6"><div class="test-box">1</div></z-col>
+        <z-col span="6"><div class="test-box">2</div></z-col>
+        <z-col span="6"><div class="test-box">3</div></z-col>
+        <z-col span="6"><div class="test-box">4</div></z-col>
+      </z-row>
+    </div>
   </div>
 </template>
 
@@ -25,12 +42,16 @@
 import Button from '@/components/button'
 import ButtonGroup from '@/components/button-group'
 import Input from '@/components/input'
+import Row from '@/components/row'
+import Col from '@/components/col'
 export default {
   name: 'App',
   components: {
     'z-button':Button,
     'z-button-group':ButtonGroup,
-    'z-input':Input
+    'z-input':Input,
+    'z-row':Row,
+    'z-col':Col
   },
   data(){
     return{
@@ -59,5 +80,6 @@ export default {
 <style lang="scss">
 #app>*{margin: 20px;}
 .button{display: flex;&>.z-button{margin-right: 10px;}}
+.test-box{border:1px solid red;height: 50px;}
 </style>
 
