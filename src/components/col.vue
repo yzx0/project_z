@@ -38,24 +38,27 @@ export default {
     colClass(){
       return [
         'z-col',
-        `z-col-span-${this.span}`,
+        this.span && `z-col-span-${this.span}`,
         this.offset && `z-col-offset-${this.offset}`,
-        this.phone && this.phone.span && `z-col-phone-span-${this.phone.span}`,
-        this.phone && this.phone.offset && `z-col-phone-offset-${this.phone.offset}`,
-        this.ipad && this.ipad.span && `z-col-ipad-span-${this.ipad.span}`,
-        this.ipad && this.ipad.offset && `z-col-ipad-offset-${this.ipad.offset}`, 
-        this.narrowPc && this.narrowPc.span && `z-col-narrowPc-span-${this.narrowPc.span}`,
-        this.narrowPc && this.narrowPc.offset && `z-col-narrowPc-offset-${this.narrowPc.offset}`,
-        this.pc && this.pc.span && `z-col-pc-span-${this.pc.span}`,
-        this.pc && this.pc.offset && `z-col-pc-offset-${this.pc.offset}`, 
-        this.widePc && this.widePc.span && `z-col-widePc-span-${this.widePc.span}`,
-        this.widePc && this.widePc.offset && `z-col-widePc-offset-${this.widePc.offset}`
+        ...this.createClass(this.phone,'phone-'),
+        ...this.createClass(this.ipad,'ipad-'),
+        ...this.createClass(this.narrowPc,'narrowPc-'),
+        ...this.createClass(this.pc,'pc-'),
+        ...this.createClass(this.widePc,'widePc-')
       ]
     },
     colStyle(){
       return {
         'padding': `0 ${this.gutter/2}px`
       }
+    }
+  },
+  methods:{
+    createClass(obj,str){
+      return [
+        obj && obj.span && `z-col-${str}span-${obj.span}`,
+        obj && obj.offset && `z-col-${str}offset-${obj.offset}`
+      ]
     }
   }
 }
