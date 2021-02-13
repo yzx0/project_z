@@ -54,6 +54,14 @@
         </z-col>
       </z-row>
     </div>
+    <z-layout style="height:100vh;margin:0;">
+      <z-sider class="test" width="200">sider</z-sider>
+      <z-layout>
+        <z-header class="test">header</z-header>
+        <z-content class="test">content</z-content>
+        <z-footer class="test">footer</z-footer>
+      </z-layout>
+    </z-layout>
   </div>
 </template>
 
@@ -63,6 +71,11 @@ import ButtonGroup from '@/components/button-group'
 import Input from '@/components/input'
 import Row from '@/components/row'
 import Col from '@/components/col'
+import Layout from '@/components/layout'
+import Header from '@/components/header'
+import Content from '@/components/content'
+import Footer from '@/components/footer'
+import Sider from '@/components/sider'
 export default {
   name: 'App',
   components: {
@@ -70,7 +83,12 @@ export default {
     'z-button-group':ButtonGroup,
     'z-input':Input,
     'z-row':Row,
-    'z-col':Col
+    'z-col':Col,
+    'z-layout':Layout,
+    'z-header':Header,
+    'z-content':Content,
+    'z-footer':Footer,
+    'z-sider':Sider,
   },
   data(){
     return{
@@ -97,8 +115,10 @@ export default {
 </script>
 
 <style lang="scss">
+#app{margin: 0;padding: 0;}
 #app>*{margin: 20px;}
 .button{display: flex;&>.z-button{margin-right: 10px;}}
 .test-box{border:1px solid red;height: 50px;}
+.test{border: 1px solid;}
 </style>
 
