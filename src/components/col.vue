@@ -55,9 +55,10 @@ export default {
   },
   methods:{
     createClass(obj,str){
+      if(!obj){return}
       return [
-        obj && obj.span && `z-col-${str}span-${obj.span}`,
-        obj && obj.offset && `z-col-${str}offset-${obj.offset}`
+        obj.span && `z-col-${str}span-${obj.span}`,
+        obj.offset && `z-col-${str}offset-${obj.offset}`
       ]
     }
   }
