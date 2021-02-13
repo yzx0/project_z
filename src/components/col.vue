@@ -4,6 +4,13 @@
   </div>
 </template>
 <script>
+function validator(value){
+  let status = true 
+  Object.keys(value).forEach(key=>{
+    if(!['span','offset'].includes(key)){status = false}
+  })
+  return status
+}
 export default {
   name:'ZCol',
   props:{
@@ -14,19 +21,24 @@ export default {
       type:[Number,String]
     },
     phone:{
-      type:Object
+      type:Object,
+      validator
     },
     ipad:{
-      type:Object
+      type:Object,
+      validator
     },
     narrowPc:{
-      type:Object
+      type:Object,
+      validator
     },
     pc:{
-      type:Object
+      type:Object,
+      validator
     },
     widePc:{
-      type:Object
+      type:Object,
+      validator
     }
   },
   data(){
