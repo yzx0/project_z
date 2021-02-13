@@ -20,8 +20,12 @@
     </div>
     <div style="border:1px solid">
       <z-row gutter="20">
-        <z-col span="10"><div class="test-box">1</div></z-col>
-        <z-col span="10" offset="4"><div class="test-box">2</div></z-col>
+        <z-col span="12" :phone="{span:12}" :pc="{span:18}" :wide-pc="{span:2}"><div class="test-box">1</div></z-col>
+        <z-col span="12" :phone="{span:12}" :pc="{span:6}" :wide-pc="{span:22}"><div class="test-box">2</div></z-col>
+      </z-row>
+      <z-row gutter="20">
+        <z-col span="10" offset="4"><div class="test-box">1</div></z-col>
+        <z-col span="10"><div class="test-box">2</div></z-col>
       </z-row>
       <z-row gutter="20">
         <z-col span="8"><div class="test-box">1</div></z-col>

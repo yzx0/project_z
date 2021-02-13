@@ -21,5 +21,6 @@ export default {
 <style lang="scss" scoped>
   .z-row{
     display: flex;
+    flex-wrap: wrap;
   }
 </style>
