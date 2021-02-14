@@ -65,6 +65,18 @@
     <z-button @click="showToast('top')">show toast top</z-button>
     <z-button @click="showToast('center')">show toast center</z-button>
     <z-button @click="showToast('bottom')">show toast bottom</z-button>
+    <z-tab :selected="selectedTab">
+      <z-tab-nav>
+        <z-nav-item name="tab1"><z-icon name="setting"></z-icon>tab1</z-nav-item>
+        <z-nav-item name="tab2">tab2</z-nav-item>
+        <z-nav-item name="tab3">tab3</z-nav-item>
+      </z-tab-nav>
+      <z-tab-content>
+        <z-content-item name="tab1">content1</z-content-item>
+        <z-content-item name="tab2">content2</z-content-item>
+        <z-content-item name="tab3">content3</z-content-item>
+      </z-tab-content>
+    </z-tab>
   </div>
 </template>
 
@@ -79,6 +91,12 @@ import Header from '@/components/header'
 import Content from '@/components/content'
 import Footer from '@/components/footer'
 import Sider from '@/components/sider'
+import Tab from '@/components/tab'
+import TabNav from '@/components/tab-nav'
+import TabNavItem from '@/components/tab-nav-item'
+import TabContent from '@/components/tab-content'
+import TabContentItem from '@/components/tab-content-item'
+import Icon from '@/icon'
 
 export default {
   name: 'App',
@@ -93,12 +111,19 @@ export default {
     'z-content':Content,
     'z-footer':Footer,
     'z-sider':Sider,
+    'z-tab':Tab,
+    'z-tab-nav':TabNav,
+    'z-nav-item':TabNavItem,
+    'z-tab-content':TabContent,
+    'z-content-item':TabContentItem,
+    'z-icon':Icon,
   },
   data(){
     return{
       loading1:false,
       loading2:false,
-      msg:'v-model'
+      msg:'v-model',
+      selectedTab:'tab2'
     }
   },
   mounted(){
