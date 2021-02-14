@@ -99,7 +99,13 @@ export default {
       msg:'v-model'
     }
   },
+  mounted(){
+    this.$toast({message:'我是一个toast<a href="https://www.baidu.com">baidu</a>',duration:999,btnText:'嘻嘻',callback:this.closeCallback})
+  },
   methods:{
+    closeCallback(e){
+      console.log(e,'app的toast回调')
+    },
     inputEvent(e){
       console.log('input:',e)
     },
