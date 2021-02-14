@@ -7,7 +7,6 @@ export default{
       vm.$mount()
       vm.message = message
       document.body.appendChild(vm.$el)
-      console.log('toast')
     }
   }
 }
