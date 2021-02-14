@@ -100,7 +100,7 @@ export default {
     }
   },
   mounted(){
-    this.$toast({message:'我是一个toast<a href="https://www.baidu.com">baidu</a>',duration:999,btnText:'嘻嘻',callback:this.closeCallback})
+    this.$toast({message:'我是一个toast<a href="https://www.baidu.com">baidu</a>',enableHtml:true,duration:999,btnText:'嘻嘻',callback:this.closeCallback})
   },
   methods:{
     closeCallback(e){

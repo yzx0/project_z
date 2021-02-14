@@ -1,6 +1,7 @@
 <template>
   <div class="toast">
-    <div class="toast-message" v-html="message"></div>
+    <div v-if="enableHtml" class="toast-message" v-html="message"></div>
+    <div v-else class="toast-message">{{message}}</div>
     <div class="toast-btn" @click="closeBtnClick">{{btnText}}</div>
     <!-- <slot></slot> -->
   </div>
@@ -28,6 +29,10 @@ export default {
     callback:{
       type:Function,
       default:(vm)=>console.log('执行回调',vm)
+    },
+    enableHtml:{
+      type:Boolean,
+      defalult:false
     }
   },
   mounted(){
