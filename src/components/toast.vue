@@ -5,10 +5,6 @@
     <!-- <slot></slot> -->
   </div>
 </template>
-自动关闭√
-关闭自动关闭时，出现自动关闭按钮，按钮文本自定义，有回调
-支持多行文字,
-支持html
 <script>
 export default {
   name:'ZToast',
