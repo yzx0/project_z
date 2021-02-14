@@ -62,7 +62,9 @@
         <z-footer class="test">footer</z-footer>
       </z-layout>
     </z-layout>
-    <z-button @click="showToast">show toast</z-button>
+    <z-button @click="showToast('top')">show toast top</z-button>
+    <z-button @click="showToast('center')">show toast center</z-button>
+    <z-button @click="showToast('bottom')">show toast bottom</z-button>
   </div>
 </template>
 
@@ -102,8 +104,8 @@ export default {
   mounted(){
     },
   methods:{
-    showToast(){
-      this.$toast({message:parseInt(Math.random()*100),enableHtml:true,duration:999,btnText:'嘻嘻',callback:this.closeCallback})
+    showToast(position){
+      this.$toast({message:parseInt(Math.random()*100),position,enableHtml:true,duration:999,btnText:'嘻嘻',callback:this.closeCallback})
     },
     closeCallback(e){
       console.log(e,'app的toast回调')
