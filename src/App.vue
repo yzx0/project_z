@@ -62,7 +62,7 @@
         <z-footer class="test">footer</z-footer>
       </z-layout>
     </z-layout>
-    <z-button @click="$toast('我是一个toast')">show toast</z-button>
+    <z-button @click="showToast">show toast</z-button>
   </div>
 </template>
 
@@ -100,9 +100,11 @@ export default {
     }
   },
   mounted(){
-    this.$toast({message:'我是一个toast<a href="https://www.baidu.com">baidu</a>',enableHtml:true,duration:999,btnText:'嘻嘻',callback:this.closeCallback})
-  },
+    },
   methods:{
+    showToast(){
+      this.$toast({message:parseInt(Math.random()*100),enableHtml:true,duration:999,btnText:'嘻嘻',callback:this.closeCallback})
+    },
     closeCallback(e){
       console.log(e,'app的toast回调')
     },

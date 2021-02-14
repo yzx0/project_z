@@ -1,15 +1,18 @@
 import Toast from '@/components/toast'
+let currentToast
 export default{
   install(Vue){
     Vue.prototype.$toast = function(toastOptions){
-      console.log(toastOptions);
+      if(currentToast){
+        currentToast.close()
+        currentToast = null
+      }
       const Constructor = Vue.extend(Toast)
-      const vm = new Constructor({
+      currentToast = new Constructor({
         propsData:toastOptions
       })
-      // vm.message = message
-      vm.$mount()
-      document.body.appendChild(vm.$el)
+      currentToast.$mount()
+      document.body.appendChild(currentToast.$el)
     }
   }
 }
