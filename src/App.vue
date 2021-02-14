@@ -62,6 +62,7 @@
         <z-footer class="test">footer</z-footer>
       </z-layout>
     </z-layout>
+    <z-button @click="$toast('我是一个toast')">show toast</z-button>
   </div>
 </template>
 
@@ -76,6 +77,7 @@ import Header from '@/components/header'
 import Content from '@/components/content'
 import Footer from '@/components/footer'
 import Sider from '@/components/sider'
+
 export default {
   name: 'App',
   components: {
