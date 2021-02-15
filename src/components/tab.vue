@@ -23,7 +23,16 @@ export default {
     }
   },
   mounted(){
-    this.eventBus.$emit('update:selected',this.selected)
+    console.log()
+    this.$children.forEach(vm => {
+      if(vm.$options.name === 'ZTabNav'){
+        vm.$children.forEach(childVm=>{
+          if(childVm.name && childVm.name === this.selected){
+            this.eventBus.$emit('update:selected',this.selected,childVm)
+          }
+        })
+      }
+    })
   }
 }
 </script>

@@ -5,7 +5,7 @@
 </template>
 <script>
 export default {
-  
+  name:'ZTabContent'
 }
 </script>
 <style lang="scss">

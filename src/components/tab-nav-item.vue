@@ -1,10 +1,12 @@
 <template>
-  <div class="tab-nav-item" @click="eventBus.$emit('update:selected',name)">
+  <div class="tab-nav-item" :class="navItemClass" @click="navItemClick">
+    <div class="line"></div>
     <slot></slot>
   </div>
 </template>
 <script>
 export default {
+  name:'ZTabNavItem',
   inject:['eventBus'],
   props:{
     name:{
@@ -20,18 +22,39 @@ export default {
   mounted(){
     this.eventBus.$on('update:selected',(data)=>{
       if(data === this.name){
-        console.log(`nav我是${data}`)
         this.active = true
       }else{
-        console.log(`nav我不是${data}`)
         this.active = false
       }
     })
+  },
+  destroyed(){
+    this.eventBus.$off()
+  },
+  computed:{
+    navItemClass(){
+      return {
+        active:this.active
+      }
+    }
+  },
+  methods:{
+    navItemClick(){
+      this.eventBus.$emit('update:selected',this.name,this)
+    }
   }
 }
 </script>
 <style lang="scss">
   .tab-nav-item{
+    cursor: pointer;
     padding: 0 2em;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: all 1s;
+    &.active{
+      color: $blue;
+    }
   }
 </style>

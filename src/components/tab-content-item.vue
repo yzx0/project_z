@@ -21,10 +21,8 @@ export default {
   mounted(){
     this.eventBus.$on('update:selected',(data)=>{
       if(data === this.name){
-        console.log(`content我是${data}`)
         this.active = true
       }else{
-        console.log(`content我不是${data}`)
         this.active = false
       }
     })
