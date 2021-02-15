@@ -28,6 +28,8 @@ body {
   margin: 20px;
 }
 
+.box-shadow {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -35,6 +37,7 @@ body {
 @mixin spin {
   animation: spin 2s infinite linear;
 }
-.box-shadow {
+}
+@mixin box-shadow {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }

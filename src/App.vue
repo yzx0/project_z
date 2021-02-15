@@ -80,24 +80,48 @@
         <z-content-item name="tab3">content3</z-content-item>
       </z-tab-content>
     </z-tab>
-    <z-popover>
+    <z-popover position="top">
       <template slot="popover-content">
         <div>
           popover content popover content popover content popover content popover content popover content
         </div>
       </template>
-      <z-button>show popover</z-button>
+      <z-button>top popover</z-button>
     </z-popover>
-    <div style="overflow:hidden;" @click="xxx">
-      <z-popover>
+    <div style="overflow:hidden;display:inline;" @click="xxx">
+      <z-popover position="right">
         <template slot="popover-content">
           <div>
             popover content popover content popover content popover content popover content popover content
           </div>
         </template>
-        <z-button>show popover</z-button>
+        <z-button>right popover</z-button>
       </z-popover>
     </div>
+      <z-popover position="bottom">
+      <template slot="popover-content">
+        <div>
+          popover content popover content popover content popover content popover content popover content
+        </div>
+      </template>
+      <z-button>bottom popover</z-button>
+    </z-popover>    
+    <z-popover position="left">
+      <template slot="popover-content">
+        <div>
+          popover content popover content popover content popover content popover content popover content
+        </div>
+      </template>
+      <z-button>left popover</z-button>
+    </z-popover>
+        <z-popover position="top">
+      <template slot="popover-content">
+        <div>
+          1
+        </div>
+      </template>
+      <z-button>top popover</z-button>
+    </z-popover>
   </div>
 </template>
 
