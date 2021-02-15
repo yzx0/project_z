@@ -88,7 +88,7 @@
       </template>
       <z-button>show popover</z-button>
     </z-popover>
-    <div style="overflow:hidden;">
+    <div style="overflow:hidden;" @click="xxx">
       <z-popover>
         <template slot="popover-content">
           <div>
@@ -149,9 +149,8 @@ export default {
       selectedTab:'tab3'
     }
   },
-  mounted(){
-    },
   methods:{
+    xxx(){console.log('appPoppverClick')},
     showToast(position){
       this.$toast({message:parseInt(Math.random()*100),position,enableHtml:true,duration:999,btnText:'嘻嘻',callback:this.closeCallback})
     },

@@ -1,9 +1,9 @@
 <template>
   <div class="popover" ref="popover">
-    <div @click.stop class="content-wrapper" ref="contentWrapper" v-if="visible">
+    <div class="content-wrapper" ref="contentWrapper" v-if="visible">
       <slot name="popover-content"></slot>
     </div>
-    <div @click.stop="slotBtnClick">
+    <div @click="slotBtnClick" ref="slotBtn">
       <slot></slot>
     </div>
   </div>
@@ -20,23 +20,30 @@ export default {
     slotBtnClick(){
       this.visible ? this.closeContent() : this.showContent()
     },
+    setContentPosition(){
+      const {top,left} = this.$el.getBoundingClientRect()
+      const {contentWrapper} = this.$refs
+      document.body.appendChild(contentWrapper)
+      contentWrapper.style.left = `${left + window.scrollX}px`  
+      contentWrapper.style.top = `${top + window.scrollY}px`  
+    },
     showContent(){
       this.visible = true
       this.$nextTick(()=>{
-        const {top,left} = this.$el.getBoundingClientRect()
-        const {contentWrapper} = this.$refs
-        document.body.appendChild(contentWrapper)
-        contentWrapper.style.left = `${left + window.scrollX}px`  
-        contentWrapper.style.top = `${top + window.scrollY}px`  
+        this.setContentPosition()
       })
       document.addEventListener('click',this.documentClickHandle)
     },
     closeContent(){
+      console.log('关闭')
       this.visible = false
       document.removeEventListener('click',this.documentClickHandle)
     },
-    documentClickHandle(){
-      console.log('document 关闭')
+    documentClickHandle(e){
+      if((this.$refs.slotBtn && this.$refs.slotBtn.contains(e.target)) 
+      || (this.$refs.contentWrapper && this.$refs.contentWrapper.contains(e.target))){
+        return
+      }
       this.closeContent()
     }
   }
