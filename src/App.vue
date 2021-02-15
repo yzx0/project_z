@@ -67,6 +67,9 @@
     <z-button @click="showToast('bottom')">show toast bottom</z-button>
     <z-tab :selected="selectedTab">
       <z-tab-nav>
+        <template slot="action">
+          <z-button>action</z-button>
+        </template>
         <z-nav-item name="tab1"><z-icon name="setting"></z-icon>tab1</z-nav-item>
         <z-nav-item name="tab2">tab2</z-nav-item>
         <z-nav-item name="tab3">tab3</z-nav-item>
