@@ -80,6 +80,24 @@
         <z-content-item name="tab3">content3</z-content-item>
       </z-tab-content>
     </z-tab>
+    <z-popover>
+      <template slot="popover-content">
+        <div>
+          popover content popover content popover content popover content popover content popover content
+        </div>
+      </template>
+      <z-button>show popover</z-button>
+    </z-popover>
+    <div style="overflow:hidden;">
+      <z-popover>
+        <template slot="popover-content">
+          <div>
+            popover content popover content popover content popover content popover content popover content
+          </div>
+        </template>
+        <z-button>show popover</z-button>
+      </z-popover>
+    </div>
   </div>
 </template>
 
@@ -99,6 +117,7 @@ import TabNav from '@/components/tab-nav'
 import TabNavItem from '@/components/tab-nav-item'
 import TabContent from '@/components/tab-content'
 import TabContentItem from '@/components/tab-content-item'
+import Popover from '@/components/popover'
 import Icon from '@/icon'
 
 export default {
@@ -120,6 +139,7 @@ export default {
     'z-tab-content':TabContent,
     'z-content-item':TabContentItem,
     'z-icon':Icon,
+    'z-popover':Popover,
   },
   data(){
     return{
