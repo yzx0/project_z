@@ -12,6 +12,10 @@ export default {
     name:{
       type:String,
       required:true
+    },
+    disable:{
+      type:Boolean,
+      default:false
     }
   },
   data() {
@@ -34,12 +38,14 @@ export default {
   computed:{
     navItemClass(){
       return {
-        active:this.active
+        active:this.active,
+        disable:this.disable
       }
     }
   },
   methods:{
     navItemClick(){
+      if(this.disable){return}
       this.eventBus.$emit('update:selected',this.name,this)
     }
   }
@@ -55,6 +61,10 @@ export default {
     transition: all 1s;
     &.active{
       color: $blue;
+    }
+    &.disable{
+      cursor: not-allowed;
+      color: $disable-color;
     }
   }
 </style>

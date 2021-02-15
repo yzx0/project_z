@@ -71,7 +71,7 @@
           <z-button>action</z-button>
         </template>
         <z-nav-item name="tab1"><z-icon name="setting"></z-icon>tab1</z-nav-item>
-        <z-nav-item name="tab2">tab2</z-nav-item>
+        <z-nav-item name="tab2" :disable="true">tab2</z-nav-item>
         <z-nav-item name="tab3">tab3</z-nav-item>
       </z-tab-nav>
       <z-tab-content>
@@ -126,7 +126,7 @@ export default {
       loading1:false,
       loading2:false,
       msg:'v-model',
-      selectedTab:'tab2'
+      selectedTab:'tab3'
     }
   },
   mounted(){
