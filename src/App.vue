@@ -122,6 +122,40 @@
       </template>
       <z-button>top popover</z-button>
     </z-popover>
+    <div>
+      <z-popover position="top" trigger="hover">
+        <template slot="popover-content">
+          <div>
+            1
+          </div>
+        </template>
+        <z-button>top popover</z-button>
+      </z-popover>
+      <z-popover position="bottom" trigger="hover">
+        <template slot="popover-content">
+          <div>
+            1
+          </div>
+        </template>
+        <z-button>bottom popover</z-button>
+      </z-popover>
+      <z-popover position="left" trigger="hover">
+        <template slot="popover-content">
+          <div>
+            1
+          </div>
+        </template>
+        <z-button>left popover</z-button>
+      </z-popover>
+      <z-popover position="right" trigger="hover">
+        <template slot="popover-content">
+          <div>
+            1
+          </div>
+        </template>
+        <z-button>right popover</z-button>
+      </z-popover>
+    </div>
   </div>
 </template>
 

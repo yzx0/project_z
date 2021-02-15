@@ -1,9 +1,9 @@
 <template>
-  <div class="popover" ref="popover">
+  <div :class="['popover',`trigger-${trigger}`]" ref="popover"  @click="popoverClick" @mouseenter="popoverMouseenter" @mouseleave="popoverMouseleave">
     <div :class="['content-wrapper',`position-${position}`]" ref="contentWrapper" v-if="visible">
       <slot name="popover-content"></slot>
     </div>
-    <div @click="slotBtnClick" ref="slotBtn">
+    <div ref="slotBtn">
       <slot></slot>
     </div>
   </div>
@@ -18,6 +18,13 @@ export default {
       validator(value){
         return ['top','bottom','left','right'].includes(value)
       }
+    },
+    trigger:{
+      type:String,
+      default:'click',
+      validator(value){
+        return ['click','hover'].includes(value)
+      }
     }
   },
   data(){
@@ -26,7 +33,17 @@ export default {
     }
   },
   methods:{
-    slotBtnClick(){
+    popoverMouseenter(){
+      if(this.trigger !== 'hover'){return}
+      this.showContent()
+    },
+    popoverMouseleave(e){
+      if(this.trigger !== 'hover'){return}
+      console.log(e.target.children)
+      this.closeContent()
+    },
+    popoverClick(){
+      if(this.trigger !== 'click'){return}
       this.visible ? this.closeContent() : this.showContent()
     },
     setContentPosition(){
@@ -60,11 +77,15 @@ export default {
       this.$nextTick(()=>{
         this.setContentPosition()
       })
-      document.addEventListener('click',this.documentClickHandle)
+      if(this.trigger === 'click'){
+        document.addEventListener('click',this.documentClickHandle)
+      }
     },
     closeContent(){
       this.visible = false
-      document.removeEventListener('click',this.documentClickHandle)
+      if(this.trigger === 'click'){
+        document.removeEventListener('click',this.documentClickHandle)
+      }
     },
     documentClickHandle(e){
       if((this.$refs.slotBtn && this.$refs.slotBtn.contains(e.target)) 
@@ -76,7 +97,6 @@ export default {
 </script>
 <style lang="scss" scoped>
   .popover{
-    // position: relative;
     display: inline-block;
   }
   .content-wrapper{
