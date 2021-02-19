@@ -155,11 +155,18 @@
         </template>
         <z-button>right popover</z-button>
       </z-popover>
-    </div>
+    </div> 
+    <z-collapse :single="true" @select="select" :defaultSelect="collapseArr">
+      <z-collapse-item title="1" name="1" >collapse1</z-collapse-item>
+      <z-collapse-item title="2" name="2">collapse2</z-collapse-item>
+      <z-collapse-item title="3" name="3">collapse3</z-collapse-item>
+    </z-collapse>
+    <p>{{collapseArr}}</p>
   </div>
 </template>
 
 <script>
+import Icon from '@/icon'
 import Button from '@/components/button'
 import ButtonGroup from '@/components/button-group'
 import Input from '@/components/input'
@@ -176,7 +183,8 @@ import TabNavItem from '@/components/tab-nav-item'
 import TabContent from '@/components/tab-content'
 import TabContentItem from '@/components/tab-content-item'
 import Popover from '@/components/popover'
-import Icon from '@/icon'
+import Collapse from '@/components/collapse'
+import CollapseItem from '@/components/collapse-item'
 
 export default {
   name: 'App',
@@ -198,16 +206,22 @@ export default {
     'z-content-item':TabContentItem,
     'z-icon':Icon,
     'z-popover':Popover,
+    'z-collapse':Collapse,
+    'z-collapse-item':CollapseItem,
   },
   data(){
     return{
       loading1:false,
       loading2:false,
       msg:'v-model',
-      selectedTab:'tab3'
+      selectedTab:'tab3',
+      collapseArr:['2']
     }
   },
   methods:{
+    select(e){
+      this.collapseArr = e
+    },
     xxx(){console.log('appPoppverClick')},
     showToast(position){
       this.$toast({message:parseInt(Math.random()*100),position,enableHtml:true,duration:999,btnText:'嘻嘻',callback:this.closeCallback})

@@ -37,9 +37,8 @@ export default {
       if(this.trigger !== 'hover'){return}
       this.showContent()
     },
-    popoverMouseleave(e){
+    popoverMouseleave(){
       if(this.trigger !== 'hover'){return}
-      console.log(e.target.children)
       this.closeContent()
     },
     popoverClick(){
