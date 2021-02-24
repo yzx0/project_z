@@ -5,8 +5,9 @@ title: Popover
 
 ## 效果
 <br/>
-<popover-demo></popover-demo>
-
+<ClientOnly>
+  <popover-demo></popover-demo>
+</ClientOnly>
 ## 使用方法
 按钮为默认插槽
 内容为具名插槽:popover-content

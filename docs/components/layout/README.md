@@ -5,8 +5,9 @@ title: Layout
 
 ## 效果
 <br/>
-<layout-demo></layout-demo>
-
+<ClientOnly>
+  <layout-demo></layout-demo>
+</ClientOnly>
 ## 使用方法
 ```vue
 <z-layout style="height:100vh;margin:0;">
@@ -17,7 +18,9 @@ title: Layout
 ```
 ## 效果
 <br/>
-<layout-demo2></layout-demo2>
+<ClientOnly>
+  <gride-demo2></gride-demo2>
+</ClientOnly>
 
 ## 使用方法
 ```vue
@@ -34,7 +37,9 @@ title: Layout
 ```
 ## 效果
 <br/>
-<layout-demo3></layout-demo3>
+<ClientOnly>
+  <gride-demo3></gride-demo3>
+</ClientOnly>
 
 ## 使用方法
 ```vue

@@ -5,8 +5,9 @@ title: Collapse
 
 ## 效果
 <br/>
-<collapse-demo></collapse-demo>
-
+<ClientOnly>
+  <collapse-demo></collapse-demo>
+</ClientOnly>
 ## 使用方法
 ```vue
 data(){

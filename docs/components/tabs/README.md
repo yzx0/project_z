@@ -4,8 +4,9 @@ title: Tabs
 # Tabs
 ## 效果
 <br/>
-<tabs-demo></tabs-demo>
-
+<ClientOnly>
+  <tabs-demo></tabs-demo>
+</ClientOnly>
 ## 使用方法
 
 ```vue

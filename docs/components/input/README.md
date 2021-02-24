@@ -5,8 +5,9 @@ title: Input
 
 ## 效果
 <br/>
-<input-demo></input-demo>
-
+<ClientOnly>
+  <input-demo></input-demo>
+</ClientOnly>
 ## 使用方法
 ```vue
   <z-input value="张三" @input="inputEvent" @focus="focusEvent" @blur="blurEvent" @change="changeEvent"></z-input>

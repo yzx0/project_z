@@ -5,8 +5,9 @@ title: Button
 
 ## 效果
 <br/>
-<button-demo></button-demo>
-
+<ClientOnly>
+  <button-demo></button-demo>
+</ClientOnly>
 ## 使用方法
 ```vue
 <z-button>默认按钮</z-button>

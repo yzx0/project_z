@@ -6,8 +6,9 @@ title: Grid
 ## 24网格
 ### 预览 
 <br/>
-<gride-demo></gride-demo>
-
+<ClientOnly>
+  <gride-demo></gride-demo>
+</ClientOnly>
 ## 使用方法
 ```vue
   <div class="gride-demo">
@@ -54,7 +55,9 @@ title: Grid
 ## 设置gutter
 gutter是每个col之间的间隙
 ### 预览 
-<gride-demo2></gride-demo2>
+<ClientOnly>
+  <gride-demo2></gride-demo2>
+</ClientOnly>
 
 ## 使用方法
 ```vue
@@ -101,7 +104,9 @@ gutter是每个col之间的间隙
 
 ## 设置offset
 ### 预览 
-<gride-demo3></gride-demo3>
+<ClientOnly>
+  <gride-demo3></gride-demo3>
+</ClientOnly>
 
 ## 使用方法
 ```vue
@@ -148,7 +153,9 @@ gutter是每个col之间的间隙
 ## 设置响应式
 ### 预览 
 <br/>
-<gride-demo4></gride-demo4>
+<ClientOnly>
+  <gride-demo4></gride-demo4>
+</ClientOnly>
 
 ## 使用方法
 ```vue
