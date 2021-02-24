@@ -1,5 +1,5 @@
 # ZUI
-[官方文档](https://frankfang.github.io/gulu/)
+[官方文档](https://yzx0.github.io/project_z/)
 
 ZUI 是一个简单易易用的 UI 框架。
 

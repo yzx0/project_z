@@ -1,29 +1,8 @@
-# project_z
+# ZUI
+[官方文档](https://yzx0.github.io/project_z/)
 
-## Project setup
-```
-npm install
-```
+ZUI 是一个简单易易用的 UI 框架。
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+本 UI 框架是基于 Vue 2 实现的。
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+注意：本 UI 框架的代码尚未完全完工，请不要在生产环境中使用本 UI 框架。

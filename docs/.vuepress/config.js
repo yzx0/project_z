@@ -1,7 +1,7 @@
   
 const path = require('path')
 module.exports = {
-  base: '/xxx/',
+  base: '/project_z/',
   title: 'ZUI',
   description: '一个好用的UI框架',
   themeConfig: {

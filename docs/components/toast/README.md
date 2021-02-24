@@ -7,6 +7,7 @@ title: Toast
 <ClientOnly>
   <toast-demo></toast-demo>
 </ClientOnly>
+
 ## 使用方法
 ```vue
 import Vue from 'vue'

@@ -8,6 +8,7 @@ title: Collapse
 <ClientOnly>
   <collapse-demo></collapse-demo>
 </ClientOnly>
+
 ## 使用方法
 ```vue
 data(){
@@ -21,6 +22,7 @@ data(){
   <z-collapse-item title="3" name="3">collapse3</z-collapse-item>
 </z-collapse>
 ```
+
 ## 选项
 collapse
 |参数|说明|类型|可选值|默认值

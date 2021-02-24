@@ -7,6 +7,7 @@ title: Tabs
 <ClientOnly>
   <tabs-demo></tabs-demo>
 </ClientOnly>
+
 ## 使用方法
 
 ```vue
@@ -53,6 +54,7 @@ data(){
 ### tab-nav
 可以加入一个具名插槽，来实现在tab-nav右边添加按钮
 插槽名:action
+
 ```vue
 <z-tab-nav>
   <template slot="action">

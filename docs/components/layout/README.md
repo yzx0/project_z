@@ -8,6 +8,7 @@ title: Layout
 <ClientOnly>
   <layout-demo></layout-demo>
 </ClientOnly>
+
 ## 使用方法
 ```vue
 <z-layout style="height:100vh;margin:0;">
@@ -16,6 +17,7 @@ title: Layout
   <z-footer style="height:50px;background:lightskyblue;">footer</z-footer>
 </z-layout>   
 ```
+
 ## 效果
 <br/>
 <ClientOnly>
