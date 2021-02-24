@@ -53,6 +53,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@import '../styles/global';
 .collapse-item{
   >*{padding: 10px;}
   .title{

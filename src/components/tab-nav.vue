@@ -29,6 +29,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@import '../styles/global';
   .tab-nav{
     display: flex;
     min-height: 50px;

@@ -30,7 +30,7 @@ export default {
     },
     callback:{
       type:Function,
-      default:(vm)=>console.log('执行回调',vm)
+      default:(vm)=>console.log('关闭',vm)
     },
     enableHtml:{
       type:Boolean,
@@ -70,6 +70,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@import '../styles/global';
   $font-size: 14px;
   $toast-min-height: 40px;
   $toast-bg: rgba(0, 0, 0, 0.75);
@@ -87,6 +88,7 @@ export default {
     100%{transform: translateY(0);}
   }
   .toast-wrapper{
+    z-index: 999;
     position: fixed;
     left: 50%;
     &.position-top{

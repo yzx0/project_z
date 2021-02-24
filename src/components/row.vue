@@ -1,5 +1,5 @@
 <template>
-  <div :class="rowClass" :style="{'margin': `0 ${-gutter/2}px`}">
+  <div :class="rowClass" :style="rowStyle">
     <slot></slot>
   </div>
 </template>
@@ -28,6 +28,12 @@ export default {
         'z-row',
         this.align && `align-${this.align}`
       ]
+    },
+    rowStyle(){
+      return{
+        'margin-left': `${-this.gutter/2}px`,
+        'margin-right': `${-this.gutter/2}px`
+      }
     }
   }
 }

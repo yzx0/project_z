@@ -13,7 +13,7 @@
   </div>
 </template>
 <script>
-  import Icon from '@/icon'
+  import Icon from '../icon'
 
   export default {
     name:'ZInput',
@@ -37,6 +37,7 @@
   }
 </script>
 <style lang="scss" scoped>
+@import '../styles/global';
   .wrapper { font-size: $font-size; display: inline-flex;
     align-items: center;
     > :not(:last-child) {margin-right: .5em; }

@@ -61,7 +61,8 @@ export default {
     },
     colStyle(){
       return {
-        'padding': `0 ${this.gutter/2}px`
+        'padding-left': `${this.gutter/2}px`,
+        'padding-right': `${this.gutter/2}px`
       }
     }
   },

@@ -10,7 +10,7 @@ export default {
   inject:['eventBus'],
   props:{
     name:{
-      type:String,
+      type:[Number,String],
       required:true
     },
     disable:{
@@ -52,9 +52,10 @@ export default {
 }
 </script>
 <style lang="scss">
+@import '../styles/global';
   .tab-nav-item{
     cursor: pointer;
-    padding: 0 2em;
+    padding: 0 1em;
     display: flex;
     align-items: center;
     position: relative;

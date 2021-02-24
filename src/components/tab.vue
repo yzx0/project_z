@@ -23,7 +23,6 @@ export default {
     }
   },
   mounted(){
-    console.log()
     this.$children.forEach(vm => {
       if(vm.$options.name === 'ZTabNav'){
         vm.$children.forEach(childVm=>{

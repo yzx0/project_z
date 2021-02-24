@@ -35,6 +35,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../styles/global';
   @keyframes loading {
     0%{
       transform: rotate(0);
@@ -44,6 +45,7 @@ export default {
     }
   }
   .z-button{
+    vertical-align: middle;
     border: 1px solid $border-color;
     font-size: $font-size;
     color:$color;
@@ -53,7 +55,7 @@ export default {
     outline: none;
     cursor: pointer;
     height: $button-height;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     .loading{
@@ -65,7 +67,7 @@ export default {
     &.left{
       .icon{
         order: 1;
-        margin-right: 0.2em;
+        margin-right: 0.3em;
       }
       .content{
         order:2;
@@ -74,7 +76,7 @@ export default {
     &.right{
       .icon{
         order: 2;
-        margin-left: 0.2em;
+        margin-left: 0.3em;
       }
       .content{
         order:1;

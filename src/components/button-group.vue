@@ -17,6 +17,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@import '../styles/global';
   .z-button-group{
     display: flex;
     align-items: center;
